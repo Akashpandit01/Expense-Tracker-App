@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 375px;
+  min-height: 100vh;
+  background: white;
+  position: relative;
+}

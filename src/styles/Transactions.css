@@ -1,0 +1,268 @@
+.transactions-page {
+
+  padding: 20px;
+  padding-bottom: 120px;
+
+  min-height: 100vh;
+
+  background: #f7f7f7;
+}
+
+/* Header */
+
+.transactions-header h2 {
+
+  font-size: 34px;
+  font-weight: 700;
+}
+
+/* Search */
+
+.search-box {
+
+  margin-top: 25px;
+}
+
+.search-box input {
+
+  width: 100%;
+
+  padding: 18px 20px;
+
+  border: none;
+
+  border-radius: 22px;
+
+  background: white;
+
+  outline: none;
+
+  font-size: 14px;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* Filter Chips */
+
+.filter-container {
+
+  display: flex;
+
+  gap: 12px;
+
+  overflow-x: auto;
+
+  margin-top: 22px;
+
+  scrollbar-width: none;
+}
+
+.filter-container::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-container button {
+
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 999px;
+
+  background: #ececec;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+.active-chip {
+
+  background: black !important;
+
+  color: white;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Transactions */
+
+.transactions-list {
+
+  margin-top: 30px;
+}
+
+.transaction-card {
+
+  background: white;
+
+  border-radius: 28px;
+
+  padding: 20px;
+
+  margin-bottom: 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow:
+    0 8px 22px rgba(0,0,0,0.05);
+}
+
+/* Left Side */
+
+.transaction-title {
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #111;
+}
+
+.transaction-icon {
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 16px;
+
+  background: #f4f4f4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #111;
+
+  flex-shrink: 0;
+}
+
+.transaction-card span {
+
+  display: block;
+
+  margin-top: 5px;
+
+  color: #9e9e9e;
+
+  font-size: 12px;
+}
+
+.transaction-card small {
+
+  display: block;
+
+  margin-top: 5px;
+
+  color: #b0b0b0;
+
+  font-size: 11px;
+}
+
+/* Right Section */
+
+.right-section {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 12px;
+}
+
+.expense {
+
+  color: #d32f2f;
+
+  font-weight: 700;
+
+  font-size: 15px;
+}
+
+.income {
+
+  color: #2e7d32;
+
+  font-weight: 700;
+
+  font-size: 15px;
+}
+
+/* Delete Button */
+
+.delete-btn {
+
+  border: none;
+
+  background: #fff1f1;
+
+  color: #d32f2f;
+
+  padding: 8px 14px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+
+  background: #ffe3e3;
+}
+
+/* Empty State */
+
+.empty-state {
+
+  background: white;
+
+  padding: 40px 25px;
+
+  border-radius: 28px;
+
+  text-align: center;
+
+  color: #9e9e9e;
+
+  box-shadow:
+    0 8px 22px rgba(0,0,0,0.05);
+}
+
+.action-buttons {
+
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn {
+
+  border: none;
+
+  background: #f1f1f1;
+
+  padding: 8px 12px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+}

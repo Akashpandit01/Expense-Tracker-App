@@ -1,0 +1,307 @@
+.analytics-page {
+
+  padding: 24px;
+  padding-bottom: 120px;
+
+  background: #f2f2f2;
+
+  min-height: 100vh;
+}
+
+/* Header */
+
+.analytics-header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-logo {
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.menu-logo span {
+
+  font-size: 18px;
+}
+
+.menu-logo h2 {
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.profile {
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: black;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Period */
+
+.period-section {
+
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.period-section button {
+
+  border: none;
+  background: transparent;
+
+  font-size: 26px;
+}
+
+.period-section p {
+
+  text-align: center;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #777;
+}
+
+.period-section h3 {
+
+  margin-top: 6px;
+
+  font-size: 28px;
+
+  font-weight: 500;
+}
+
+/* Expense Card */
+
+.expense-card {
+
+  margin-top: 35px;
+
+  background: white;
+
+  padding: 28px;
+
+  display: flex;
+
+  gap: 20px;
+}
+
+.expense-line {
+
+  width: 4px;
+
+  background: black;
+}
+
+.expense-card p {
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  color: #777;
+}
+
+.expense-card h1 {
+
+  margin-top: 14px;
+
+  font-size: 46px;
+
+  font-weight: 400;
+}
+
+.expense-card span {
+
+  display: inline-block;
+
+  margin-top: 10px;
+
+  font-size: 13px;
+
+  color: #777;
+}
+
+/* Chart */
+
+.chart-container {
+
+  margin-top: 28px;
+
+  background: white;
+
+  padding: 30px;
+
+  position: relative;
+}
+
+.chart-title {
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  color: #777;
+}
+
+.chart-center {
+
+  position: absolute;
+
+  top: 58%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  text-align: center;
+}
+
+.chart-center h3 {
+
+  font-size: 40px;
+
+  font-weight: 400;
+}
+
+.chart-center p {
+
+  margin-top: 5px;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  color: #777;
+}
+
+/* Breakdown */
+
+.category-breakdown {
+
+  margin-top: 20px;
+}
+
+.category-row {
+
+  background: white;
+
+  padding: 18px 20px;
+
+  margin-bottom: 2px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-left {
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.category-dot {
+
+  width: 10px;
+  height: 10px;
+}
+
+.category-row p {
+
+  font-size: 15px;
+}
+
+.category-row span {
+
+  font-size: 12px;
+
+  color: #777;
+}
+
+.category-row h4 {
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+/* Button */
+
+.report-btn {
+
+  width: 100%;
+
+  margin-top: 24px;
+
+  border: none;
+
+  background: black;
+
+  color: white;
+
+  padding: 18px;
+
+  font-size: 14px;
+
+  letter-spacing: 1px;
+
+  border-radius: 18px;
+}
+
+/* Trend */
+
+.trend-section {
+
+  margin-top: 45px;
+}
+
+.trend-section p {
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  color: #777;
+}
+
+.trend-box {
+
+  margin-top: 20px;
+
+  background: white;
+
+  padding: 20px;
+}
+
+/* Empty */
+
+.empty-state {
+
+  text-align: center;
+
+  padding: 50px 0;
+
+  color: #777;
+}
