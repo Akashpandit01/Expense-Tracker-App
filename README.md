@@ -20,9 +20,9 @@ Track your income, expenses, and spending analytics with a premium responsive UI
 
 # 🚀 Live Demo
 
-```bash
+
 https://expense-tracker-app-omega-jet.vercel.app/
-```
+
 
 ---
 
