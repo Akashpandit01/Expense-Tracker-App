@@ -147,7 +147,7 @@ src/
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/expense-tracker-app.git
+git clone https://github.com/Akashpandit01/Expense-Tracker-App
 ```
 
 ---
