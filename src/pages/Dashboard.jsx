@@ -13,7 +13,7 @@ import {
 
 } from "react-icons/md";
 import BottomNav from "../components//BottomNav";
-
+import { MdMenu } from "react-icons/md";
 import {
   useContext
 } from "react";
@@ -66,7 +66,13 @@ function Dashboard() {
 
       <div className="header">
 
-        <h3>Financial Serenity</h3>
+        <div className="header-left">
+
+          <MdMenu className="menu-icon" />
+
+          <h3>Financial Serenity</h3>
+
+        </div>
 
         <div className="profile">
           A

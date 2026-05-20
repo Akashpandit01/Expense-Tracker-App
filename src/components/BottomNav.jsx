@@ -36,7 +36,7 @@ function BottomNav() {
         to="/transactions"
         className={
           location.pathname ===
-          "/transactions"
+            "/transactions"
             ? "active"
             : ""
         }
@@ -50,7 +50,14 @@ function BottomNav() {
 
       <Link
         to="/add"
-        className="add-btn"
+
+        className={
+          location.pathname === "/add"
+
+            ? "add-btn active-add"
+
+            : "add-btn"
+        }
       >
 
         <MdAdd size={30} />
@@ -61,7 +68,7 @@ function BottomNav() {
         to="/analytics"
         className={
           location.pathname ===
-          "/analytics"
+            "/analytics"
             ? "active"
             : ""
         }

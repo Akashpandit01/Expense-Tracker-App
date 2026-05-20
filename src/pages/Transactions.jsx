@@ -12,12 +12,13 @@ import {
   MdFastfood,
   MdShoppingBag,
   MdDirectionsBus,
-   MdFlight,
+  MdFlight,
   MdHome,
   MdHealthAndSafety,
   MdReceipt,
   MdInventory,
-  MdEdit
+  MdEdit,
+  MdMenu
 
 } from "react-icons/md";
 
@@ -58,8 +59,8 @@ function Transactions() {
     "All",
 
     "Food",
-     "Travel",
-     
+    "Travel",
+
     "Transport",
 
     "Shopping",
@@ -139,12 +140,12 @@ function Transactions() {
         const matchesCategory =
 
           selectedCategory ===
-          "All"
+            "All"
 
             ? true
 
             : item.category ===
-              selectedCategory;
+            selectedCategory;
 
         return (
 
@@ -170,7 +171,7 @@ function Transactions() {
 
       if (
         !groupedTransactions[
-          formattedDate
+        formattedDate
         ]
       ) {
 
@@ -193,11 +194,19 @@ function Transactions() {
 
       {/* Header */}
 
-      <div className="transactions-header">
+      <div className="header">
 
-        <h2>
-          Transactions
-        </h2>
+        <div className="header-left">
+
+          <MdMenu className="menu-icon" />
+
+          <h3>Financial Serenity</h3>
+
+        </div>
+
+        <div className="profile">
+          A
+        </div>
 
       </div>
 
@@ -263,168 +272,185 @@ function Transactions() {
 
           ) : (
 
-            Object.keys(
-              groupedTransactions
-            ).map((date) => (
+            Object.keys(groupedTransactions)
 
-              <div
-                className="date-group"
-                key={date}
-              >
+              .sort((a, b) => {
 
-                {/* Date */}
+                if (a === "Today") return -1;
 
-                <p className="date-title">
+                if (b === "Today") return 1;
 
-                  {date}
+                if (a === "Yesterday") return -1;
 
-                </p>
+                if (b === "Yesterday") return 1;
 
-                {/* Cards */}
+                return 0;
+              })
 
-                {
-                  groupedTransactions[
-                    date
-                  ]
-                    .slice()
-                    .reverse()
-                    .map((item) => (
+              .map((date) => (
 
-                      <div
-                        className="transaction-card"
-                        key={item.id}
-                      >
+                <div
+                  className="date-group"
+                  key={date}
+                >
 
-                        {/* Left */}
+                  {/* Date */}
 
-                        <div>
+                  <p className="date-title">
 
-                          <h4 className="transaction-title">
+                    {date}
 
-                            <div className="transaction-icon">
+                  </p>
 
-                              {item.category === "Food" &&
-                                <MdFastfood size={18} />
+                  {/* Cards */}
+
+                  {
+                    groupedTransactions[
+                      date
+                    ]
+                      .slice()
+                      .reverse()
+                      .map((item) => (
+
+                        <div
+                          className="transaction-card"
+                          key={item.id}
+                        >
+
+                          {/* Left */}
+
+                          <div>
+
+                            <h4 className="transaction-title">
+
+                              <div className="transaction-icon">
+
+                                {item.category === "Food" &&
+                                  <MdFastfood size={18} />
+                                }
+
+                                {item.category === "Shopping" &&
+                                  <MdShoppingBag size={18} />
+                                }
+
+                                {item.category === "Travel" &&
+                                  <MdFlight size={18} />
+                                }
+
+                                {item.category === "Transport" &&
+                                  <MdDirectionsBus size={18} />
+                                }
+
+                                {item.category === "Rent" &&
+                                  <MdHome size={18} />
+                                }
+
+                                {item.category === "Health" &&
+                                  <MdHealthAndSafety size={18} />
+                                }
+
+                                {item.category === "Bills" &&
+                                  <MdReceipt size={18} />
+                                }
+
+                                {item.category === "Other" &&
+                                  <MdInventory size={18} />
+                                }
+
+                              </div>
+
+                              {item.note}
+
+                            </h4>
+
+                            <span>
+                              {item.category}
+                            </span>
+
+                          </div>
+
+                          {/* Right */}
+
+                          <div className="right-section">
+
+                            <p
+                              className={
+                                item.type ===
+                                  "income"
+
+                                  ? "income"
+
+                                  : "expense"
+                              }
+                            >
+
+                              {
+                                item.type ===
+                                  "income"
+
+                                  ? "+"
+
+                                  : "-"
                               }
 
-                              {item.category === "Shopping" &&
-                                <MdShoppingBag size={18} />
-                              }
+                              ${item.amount}
 
-                              {item.category === "Transport" &&
-                                <MdDirectionsBus size={18} />
-                              }
+                            </p>
 
-                              {item.category === "Rent" &&
-                                <MdHome size={18} />
-                              }
+                            <div className="action-buttons">
 
-                              {item.category === "Health" &&
-                                <MdHealthAndSafety size={18} />
-                              }
+                              {/* Edit */}
 
-                              {item.category === "Bills" &&
-                                <MdReceipt size={18} />
-                              }
+                              <button
+                                className="edit-btn"
 
-                              {item.category === "Other" &&
-                                <MdInventory size={18} />
-                              }
+                                onClick={() => {
+
+                                  localStorage.setItem(
+
+                                    "editTransaction",
+
+                                    JSON.stringify(item)
+
+                                  );
+
+                                  navigate("/add");
+
+                                }}
+                              >
+
+                                <MdEdit size={16} />
+
+                              </button>
+
+                              {/* Delete */}
+
+                              <button
+                                className="delete-btn"
+
+                                onClick={() =>
+                                  deleteTransaction(
+                                    item.id
+                                  )
+                                }
+                              >
+
+                                Delete
+
+                              </button>
 
                             </div>
-
-                            {item.note}
-
-                          </h4>
-
-                          <span>
-                            {item.category}
-                          </span>
-
-                        </div>
-
-                        {/* Right */}
-
-                        <div className="right-section">
-
-                          <p
-                            className={
-                              item.type ===
-                              "income"
-
-                                ? "income"
-
-                                : "expense"
-                            }
-                          >
-
-                            {
-                              item.type ===
-                              "income"
-
-                                ? "+"
-
-                                : "-"
-                            }
-
-                            ${item.amount}
-
-                          </p>
-
-                          <div className="action-buttons">
-
-                            {/* Edit */}
-
-                            <button
-                              className="edit-btn"
-
-                              onClick={() => {
-
-                                localStorage.setItem(
-
-                                  "editTransaction",
-
-                                  JSON.stringify(item)
-
-                                );
-
-                                navigate("/add");
-
-                              }}
-                            >
-
-                              <MdEdit size={16} />
-
-                            </button>
-
-                            {/* Delete */}
-
-                            <button
-                              className="delete-btn"
-
-                              onClick={() =>
-                                deleteTransaction(
-                                  item.id
-                                )
-                              }
-                            >
-
-                              Delete
-
-                            </button>
 
                           </div>
 
                         </div>
 
-                      </div>
+                      ))
+                  }
 
-                    ))
-                }
+                </div>
 
-              </div>
-
-            ))
+              ))
 
           )
         }

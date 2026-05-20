@@ -1,11 +1,33 @@
-.dashboard {
-  padding: 20px;
-  padding-bottom: 120px;
-  min-height: 100vh;
-  background: #f7f7f7;
+body {
+  margin: 0;
+  padding: 0;
+
+  /* MAIN BACKGROUND WHITE */
+  background: #ffffff;
+
+  font-family: Georgia, serif;
 }
 
-/* Header */
+.dashboard {
+
+  width: 100%;
+  max-width: 390px;
+
+  margin: auto;
+
+  min-height: 100vh;
+
+  /* PHONE / APP AREA WHITE */
+  background: #ffffff;
+
+  padding: 16px;
+
+  padding-bottom: 105px;
+
+  box-sizing: border-box;
+}
+
+/* HEADER */
 
 .header {
   display: flex;
@@ -13,163 +35,212 @@
   align-items: center;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-icon {
+  font-size: 22px;
+  color: #555;
+  cursor: pointer;
+}
+
 .header h3 {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 500;
+  color: #111;
 }
 
 .profile {
-  width: 42px;
-  height: 42px;
 
-  border-radius: 50%;
+  width: 36px;
+  height: 36px;
 
-  background: black;
-  color: white;
+  border-radius: 10px;
+
+  background: #f3f3f3;
+
+  color: #111;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
+  font-size: 13px;
   font-weight: 600;
-
-  box-shadow:
-    0 6px 18px rgba(0,0,0,0.12);
 }
 
-/* Balance Section */
+/* BALANCE */
 
 .balance-section {
 
-  margin-top: 30px;
+  margin-top: 24px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #111111,
-      #2b2b2b
-    );
+  text-align: center;
 
-  color: white;
+  background: #ffffff;
 
-  padding: 35px 28px;
-
-  border-radius: 32px;
-
-  box-shadow:
-    0 12px 30px rgba(0,0,0,0.15);
+  padding: 10px 0;
 }
 
 .balance-title {
 
-  color: #bdbdbd;
+  color: #8d8d8d;
 
-  font-size: 12px;
+  font-size: 10px;
 
   letter-spacing: 2px;
+
+  font-weight: 500;
 }
 
 .balance-section h1 {
 
-  margin-top: 15px;
+  margin-top: 10px;
 
   font-size: 42px;
 
-  font-weight: 700;
+  font-weight: 500;
+
+  color: #111;
 }
 
 .balance-section span {
 
   display: inline-block;
 
-  margin-top: 15px;
+  margin-top: 6px;
 
-  padding: 8px 16px;
+  color: #9e9e9e;
 
-  border-radius: 30px;
-
-  background:
-    rgba(255,255,255,0.12);
-
-  color: #e0e0e0;
-
-  font-size: 13px;
+  font-size: 11px;
 }
 
-/* Summary Cards */
+/* GRAY SECTION */
 
 .summary-container {
 
+  margin-top: 20px;
+
   display: flex;
 
-  gap: 15px;
+  gap: 12px;
 
-  margin-top: 25px;
+  background: #f3f3f3;
+
+  padding: 12px;
+
+  border-radius: 18px;
 }
+
+/* WHITE COMPONENT */
 
 .summary-card {
 
   flex: 1;
 
-  background: white;
+  background: #ffffff;
 
-  padding: 22px;
+  padding: 18px 16px;
 
-  border-radius: 24px;
-
-  box-shadow:
-    0 6px 18px rgba(0,0,0,0.06);
+  border-radius: 14px;
 }
 
 .summary-card p {
 
-  color: #9e9e9e;
+  color: #777;
 
-  font-size: 12px;
+  font-size: 10px;
 
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+
+  font-weight: 500;
 }
 
 .summary-card h2 {
 
   margin-top: 12px;
 
-  font-size: 24px;
+  font-size: 19px;
+
+  font-weight: 500;
+
+  color: #111;
 }
 
-/* Analytics Banner */
+/* ANALYTICS */
 
 .analytics-banner {
 
-  margin-top: 28px;
+  margin-top: 18px;
 
-  background: black;
+  background:
+    linear-gradient(
+      145deg,
+      #0c0c0c,
+      #1a1a1a
+    );
 
   color: white;
 
-  padding: 28px;
+  padding: 20px 18px;
 
-  border-radius: 28px;
+  border-radius: 16px;
 
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.12);
+  position: relative;
+
+  overflow: hidden;
+}
+
+.analytics-banner::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 140px;
+  height: 140px;
+
+  top: -50px;
+  right: -40px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,0.06),
+      transparent
+    );
 }
 
 .analytics-banner h3 {
 
-  font-size: 20px;
+  font-size: 18px;
+
+  font-weight: 500;
+
+  position: relative;
+  z-index: 2;
 }
 
 .analytics-banner p {
 
-  margin-top: 10px;
+  margin-top: 8px;
 
-  color: #cfcfcf;
+  color: #c7c7c7;
+
+  font-size: 11px;
 
   line-height: 1.5;
+
+  max-width: 180px;
+
+  position: relative;
+  z-index: 2;
 }
 
-/* Recent Activity */
+/* RECENT */
 
 .recent-header {
 
@@ -177,121 +248,114 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-top: 35px;
+  margin-top: 24px;
+  margin-bottom: 14px;
 }
 
 .recent-header h3 {
 
-  font-size: 20px;
+  font-size: 18px;
+
+  font-weight: 500;
+
+  color: #111;
 }
 
-.recent-header span {
+.recent-header::after {
 
-  font-size: 12px;
+  content: "VIEW ALL";
 
-  color: #9e9e9e;
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+
+  color: #777;
 }
 
-/* Transactions */
+/* GRAY TRANSACTION AREA */
 
 .transactions-list {
 
-  margin-top: 20px;
+  background: #f3f3f3;
+
+  padding: 12px;
+
+  border-radius: 18px;
 }
+
+/* WHITE CARD */
 
 .transaction-item {
 
-  background: white;
+  background: #ffffff;
 
-  padding: 20px;
+  padding: 14px;
 
-  border-radius: 24px;
+  border-radius: 14px;
 
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  box-shadow:
-    0 6px 18px rgba(0,0,0,0.05);
 }
 
-.transaction-title {
-
-  font-size: 15px;
-
-  font-weight: 600;
-}
-
-.transaction-item p {
-
-  margin-top: 5px;
-
-  color: #9e9e9e;
-
-  font-size: 12px;
-}
-
-.transaction-item span {
-
-  font-weight: 600;
-}
-
-/* Empty State */
-
-.empty-state {
-
-  background: white;
-
-  padding: 35px;
-
-  border-radius: 24px;
-
-  text-align: center;
-
-  color: #9e9e9e;
-
-  box-shadow:
-    0 6px 18px rgba(0,0,0,0.05);
-}
 .transaction-title {
 
   display: flex;
   align-items: center;
+
   gap: 10px;
 
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 13px;
+
+  font-weight: 500;
+
+  color: #111;
 }
 
 .transaction-title svg {
-  color: #111;
+
+  background: #f1f1f1;
+
+  color: #555;
+
+  width: 30px;
+  height: 30px;
+
+  padding: 7px;
+
+  border-radius: 9px;
 }
+
 .transaction-meta {
 
   display: flex;
-
   align-items: center;
 
-  gap: 10px;
+  gap: 6px;
 
-  margin-top: 6px;
+  margin-top: 3px;
 }
 
 .transaction-meta p {
 
-  color: #777;
+  color: #8d8d8d;
 
-  font-size: 13px;
+  font-size: 10px;
+
+  margin: 0;
 }
 
 .transaction-meta small {
 
   color: #b0b0b0;
 
-  font-size: 11px;
+  font-size: 9px;
 }
+
+/* RIGHT SIDE */
+
 .amount-section-right {
 
   display: flex;
@@ -300,34 +364,62 @@
 
   align-items: flex-end;
 
-  gap: 5px;
+  gap: 3px;
 }
-
-/* Amount */
 
 .income-text {
 
-  color: #2e7d32;
+  color: #666;
 
-  font-weight: 600;
+  font-size: 12px;
 
-  font-size: 16px;
+  font-weight: 500;
 }
 
 .expense-text {
 
-  color: #d32f2f;
+  color: #111;
 
-  font-weight: 600;
+  font-size: 12px;
 
-  font-size: 16px;
+  font-weight: 500;
 }
-
-/* Date */
 
 .amount-section-right small {
 
   color: #9e9e9e;
 
-  font-size: 11px;
+  font-size: 9px;
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+
+  background: #ffffff;
+
+  padding: 30px;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+  color: #777;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+  .dashboard {
+
+    padding: 14px;
+
+    padding-bottom: 105px;
+  }
+
+  .balance-section h1 {
+
+    font-size: 40px;
+  }
 }

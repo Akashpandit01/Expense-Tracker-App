@@ -1,11 +1,14 @@
 import "../styles/Analytics.css";
 
 import BottomNav from "../components/BottomNav";
+  
+
+
 
 import {
-  useContext
+  useContext,
+  useState
 } from "react";
-
 import {
   ExpenseContext
 } from "../context/ExpenseContext";
@@ -24,6 +27,34 @@ function Analytics() {
 
   const { transactions } =
     useContext(ExpenseContext);
+ 
+    const [currentDate, setCurrentDate] =
+  useState(new Date());
+
+  const handlePrevMonth = () => {
+
+  const prev =
+    new Date(currentDate);
+
+  prev.setMonth(
+    prev.getMonth() - 1
+  );
+
+  setCurrentDate(prev);
+};
+
+const handleNextMonth = () => {
+
+  const next =
+    new Date(currentDate);
+
+  next.setMonth(
+    next.getMonth() + 1
+  );
+
+  setCurrentDate(next);
+};
+
 
   // Expense Transactions
 
@@ -124,28 +155,45 @@ function Analytics() {
 
       {/* Period */}
 
-      <div className="period-section">
+     <div className="period-section">
 
-        <button>
-          &#8249;
-        </button>
+  <button
+    onClick={handlePrevMonth}
+  >
+    &#8249;
+  </button>
 
-        <div>
-          <p>CURRENT PERIOD</p>
+  <div>
 
-          <h3>
-            {new Date().toLocaleString("default", {
-              month: "long",
-              year: "numeric",
-            })}
-          </h3>
-        </div>
+    <p>
+      CURRENT PERIOD
+    </p>
 
-        <button>
-          &#8250;
-        </button>
+    <h3>
 
-      </div>
+      {
+        currentDate.toLocaleString(
+          "default",
+          {
+
+            month: "long",
+
+            year: "numeric",
+          }
+        )
+      }
+
+    </h3>
+
+  </div>
+
+  <button
+    onClick={handleNextMonth}
+  >
+    &#8250;
+  </button>
+
+</div>
 
       {/* Expense Card */}
 
@@ -168,6 +216,7 @@ function Analytics() {
           </span>
 
         </div>
+
 
       </div>
 

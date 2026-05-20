@@ -82,11 +82,11 @@ function AddTransaction() {
       editingData?.date
 
         ? editingData.date
-            .split("T")[0]
+          .split("T")[0]
 
         : new Date()
-            .toISOString()
-            .split("T")[0]
+          .toISOString()
+          .split("T")[0]
     );
 
   // Categories
@@ -206,7 +206,7 @@ function AddTransaction() {
 
       {/* Header */}
 
-      <div className="add-header">
+      {/* <div className="add-header">
 
         <h2>
 
@@ -220,7 +220,41 @@ function AddTransaction() {
 
         </h2>
 
+      </div> */}
+
+      <div className="add-header">
+
+        <div className="header-left">
+
+          <span className="close-icon">
+            ✕
+          </span> 
+
+          <h2>
+
+          {
+            editingData
+
+              ? "Edit Transaction"
+
+              : "Add Transaction"
+          }
+
+        </h2>
+
+        </div>
+
+        <div className="profile">
+          A
+        </div>
+
       </div>
+
+
+
+
+
+
 
       {/* Toggle */}
 
