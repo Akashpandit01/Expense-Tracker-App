@@ -209,6 +209,41 @@ Then deploy the `dist` folder to Vercel.
 
 ---
 
+
+# 🏗 Key Decisions Made
+
+## 1. Context API for State Management
+Context API was used to manage transactions globally across the application without prop drilling.
+
+## 2. localStorage for Persistence
+localStorage was implemented to persist transaction data across page reloads without requiring a backend.
+
+## 3. Mobile-First UI Design
+The application was designed using a mobile-first approach to provide a smooth user experience on smaller devices.
+
+## 4. Recharts for Analytics
+Recharts library was selected to create interactive and responsive analytics charts.
+
+## 5. Component-Based Architecture
+The project follows a reusable component-based structure for better scalability and maintainability.
+
+
+
+# 🚀 Improvements With More Time
+
+Given more development time, the following improvements would be implemented:
+
+- User Authentication
+- Cloud Database Integration
+- Monthly Budget Planning
+- Dark Mode
+- Export Reports (PDF / Excel)
+- Real-time Notifications
+- Multi-user Support
+- Advanced Analytics & Insights
+- Transaction Categories Customization
+- Backend API Integration
+
 # 🚀 Future Improvements
 
 * Dark Mode
